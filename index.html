@@ -1,5 +1,74 @@
-<div>
-    <a href="https://www.nav.no/" title="Hjem" data-ga="Header/Logo">
-        <img src="/assets/nav_logo.svg" alt="NAV-logo">
-    </a>
-</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>NAVIKT</title>
+    <!--link rel="stylesheet" href="stylesheet.css" type="text/css" /-->
+  </head>
+  <body>
+
+    <h1>
+      <a href="https://www.nav.no/" title="Hjem" data-ga="Header/Logo">
+        <img src="assets/nav_logo.svg" alt="NAV-logo">
+      </a>
+    </h1>
+
+    <h2>
+      <a href="https://github.com/navikt">
+        Besøk oss på github
+      </a>
+    </h2>
+
+    <h2><span id="repoes">1337</span> åpne repoer</h2>
+
+    <h2>Siste aktivitet:</h2>
+
+    <ul id="commits">
+    </ul>
+
+    <script type="text/javascript" src="github.js"></script>
+    <script type="text/javascript">
+      async function fetchStats() {
+        const response = await fetch('https://www.detsombetyrnoe.no/api/github');
+        const github = await response.body.json();
+        return github;
+      }
+
+      function updateRepoCount(repoes) {
+        var elem = document.querySelector('#repoes');
+        elem.textContent = repoes;
+      }
+
+      function updateCommits(commits) {
+        var list = document.querySelector('#commits');
+        for (var i = 0; i < commits.length; i++) {
+          commit = commits[i];
+          item = document.createElement('li');
+
+          var date = new Date(commit.pushedAt);
+          var formattedDate = date.toLocaleDateString('no-nb', {day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit'});
+          var description = ''
+          if (commit.description) {
+            description = commit.description;
+          }
+          item.innerHTML = formattedDate + ' - ' + commit.name + '<br />' + description;
+          list.append(item);
+        }
+      }
+
+      function autorun() {
+        //fetchStats().then(github => {
+        var repoCount = github.organization.publicRepositories.totalCount
+        updateRepoCount(repoCount);
+
+        var commits = github.organization.publicRepositories.nodes;
+        updateCommits(commits);
+        //});
+      }
+
+      if (document.addEventListener) document.addEventListener("DOMContentLoaded", autorun, false);
+      else if (document.attachEvent) document.attachEvent("onreadystatechange", autorun);
+      else window.onload = autorun;
+    </script>
+  </body>
+</html>
