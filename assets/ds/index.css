@@ -1,0 +1,20 @@
+@import "baseline/baseline.css";
+@import "typography.css";
+
+@import "content-container.css";
+@import "link.css";
+@import "loader.css";
+@import "tag.css";
+@import "panel.css";
+@import "link-panel.css";
+
+header {
+    margin: var(--navds-spacing-9) 0;
+    display: grid;
+    grid-auto-flow: column;
+    place-items: center;
+}
+
+.spacing {
+    margin-bottom: var(--navds-spacing-6);
+}

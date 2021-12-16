@@ -3,28 +3,25 @@
   <head>
     <meta charset="UTF-8">
     <title>NAVIKT</title>
-    <!--link rel="stylesheet" href="stylesheet.css" type="text/css" /-->
+    <link rel="stylesheet" href="assets/ds/index.css" type="text/css" />
   </head>
-  <body>
-
-    <h1>
-      <a href="https://www.nav.no/" title="Hjem" data-ga="Header/Logo">
+  <body class="navds-content-container">
+    <header>
+      <a href="https://www.nav.no/" title="Hjem" data-ga="Header/Logo" class="navds-link navds-heading navds-heading--medium">
         <img src="assets/nav_logo.svg" alt="NAV-logo">
       </a>
-    </h1>
-
-    <h2>
-      <a href="https://github.com/navikt">
-        Besøk oss på github
+      <a href="https://github.com/navikt" class="navds-link navds-heading navds-heading--medium">
+        Besøk oss på GitHub!
       </a>
-    </h2>
+    </header>
 
-    <h2><span id="repoes">1337</span> åpne repoer</h2>
-
-    <h2>Siste aktivitet:</h2>
-
-    <ul id="commits">
-    </ul>
+    <section>
+      <h2><span id="repoes">1337</span> åpne repoer</h2>
+    </section>
+    <section>
+      <h3>Siste aktivitet:</h3>
+      <div id="commits"></div>
+    </section>
 
     <script type="text/javascript" src="github.js"></script>
     <script type="text/javascript">
@@ -43,26 +40,69 @@
         var list = document.querySelector('#commits');
         for (var i = 0; i < commits.length; i++) {
           commit = commits[i];
-          item = document.createElement('li');
+          item = document.createElement('a');
+          item.href = commit.url;
+          item.classList.add("navds-panel");
+          item.classList.add("navds-link-panel");
+          item.classList.add("navds-panel--border");
+          item.classList.add("spacing");
 
-          var date = new Date(commit.pushedAt);
-          var formattedDate = date.toLocaleDateString('no-nb', {day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit'});
-          var description = ''
+          const date = new Date(commit.pushedAt);
+          const formattedDate = date.toLocaleDateString('no-nb', {day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit'});
+
+          content = document.createElement('div');
+          content.classList.add("navds-link-panel__content");
+
+          title = document.createElement('div');
+          title.classList.add("navds-link-panel__title");
+          title.classList.add("navds-heading");
+          title.classList.add("navds-heading--medium");
+          title.innerHTML = `<span class="navds-tag navds-tag--info navds-tag--medium navds-body-short">${formattedDate}</span> ${commit.name}`
+
+          content.append(title);
+
           if (commit.description) {
-            description = commit.description;
+            description = document.createElement('div');
+            description.classList.add("navds-link-panel__description");
+            description.classList.add("navds-body-long");
+            description.textContent = commit.description;
+
+            content.append(description);
           }
-          item.innerHTML = formattedDate + ' - ' + commit.name + '<br />' + description;
+
+
+          item.append(content);
+
+          item.innerHTML += `<svg
+            width="1em"
+            height="1em"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            focusable="false"
+            role="img"
+            class="navds-link-panel__chevron"
+            aria-label="arrow-icon pointing right"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M17 12L8.429 3 7 4.5l7.143 7.5L7 19.5 8.429 21 17 12z"
+              fill="currentColor"
+            ></path>
+          </svg>`;
+
           list.append(item);
         }
       }
 
       function autorun() {
         //fetchStats().then(github => {
-        var repoCount = github.organization.publicRepositories.totalCount
-        updateRepoCount(repoCount);
+          var repoCount = github.organization.publicRepositories.totalCount
+          updateRepoCount(repoCount);
 
-        var commits = github.organization.publicRepositories.nodes;
-        updateCommits(commits);
+          var commits = github.organization.publicRepositories.nodes;
+          updateCommits(commits);
         //});
       }
 
