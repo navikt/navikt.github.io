@@ -47,20 +47,35 @@
         </ul>
     </div>
     <script>
-      var formatDate = function (timestamp) {
+      function formatDate(timestamp) {
 	      var date = new Date(timestamp);
 	      var months = ['Januar', 'Februar', 'Mars', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober',	'November', 'Desember'];
 	      return date.getDate() + " " + months[date.getMonth()] + " " + date.getHours() + ":" + date.getMinutes();
-      };
+      }
+
+      function parseNode(node) {
+        var item = {
+          date: formatDate(node.updatedAt),
+          repo: node.name,
+          url: node.url,
+        }
+
+        if (node.defaultBranchRef == null) {
+          item.message = node.description;
+        } else {
+          item.message = node.defaultBranchRef.target.message.replace('\n', '<br />');
+        }
+
+        return item
+      }
 
       function updateCommitList(data) {
         var elem = document.querySelector('#repos');
         elem.innerHTML = data.publicRepositories.totalCount
 
         var options = {
-          valueNames: ['date', 'repo', 'url', 'commit'],
           item: function(values) {
-            return '<li class="li-commit">' + values.date + ' på <a href="' + values.url + '">' + values.repo + '</a><br />' + values.commit + '</li>';
+            return '<li class="li-commit">' + values.date + ' på <a href="' + values.url + '">' + values.repo + '</a><br />' + values.message + '</li>';
           }
         }
 
@@ -68,12 +83,7 @@
         var nodes = data.publicRepositories.nodes;
         for (let i = 0; i < nodes.length; i++) {
           let node = nodes[i];
-          commits.push({
-            date: formatDate(node.updatedAt),
-            repo: node.name,
-            url: node.url,
-            commit: node.defaultBranchRef.target.message.replace('\n', '<br />')
-          })
+          commits.push(parseNode(node))
         }
 
         var commitList = new List('commits', options, commits);
