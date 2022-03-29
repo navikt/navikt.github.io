@@ -47,15 +47,16 @@
         </ul>
     </div>
     <script>
-      function formatDate(timestamp) {
-	      var date = new Date(timestamp);
-	      var months = ['Januar', 'Februar', 'Mars', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober',	'November', 'Desember'];
-	      return date.getDate() + " " + months[date.getMonth()] + " " + date.getHours() + ":" + date.getMinutes();
-      }
+      const dateFormatter = new Intl.DateTimeFormat("no", {
+        month: "long",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit",
+      })
 
       function parseNode(node) {
         var item = {
-          date: formatDate(node.updatedAt),
+          date: dateFormatter.format(new Date(node.updatedAt)),
           repo: node.name,
           url: node.url,
         }
