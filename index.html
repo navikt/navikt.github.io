@@ -1,5 +1,87 @@
-<div>
-    <a href="https://www.nav.no/" title="Hjem" data-ga="Header/Logo">
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="utf-8">
+    <title>NAVIKT</title>
+    <link href="https://www.nav.no/dekoratoren/media/favicon.ico" rel="icon" type="image/x-icon">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+    <style>
+      ul.dashed {
+          padding: 0;
+          list-style-type: none;
+      }
+
+      ul.dashed > li {
+          margin-block-start: 1em;
+          margin-block-end: 1em;
+          margin-inline-start: 1em;
+          margin-inline-end: 1em;
+      }
+
+      ul.dashed > li:before {
+          content: "–"; /* en dash */
+          position: absolute;
+          margin-left: -1.1em;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <a href="https://www.nav.no/" title="Hjem" data-ga="Header/Logo">
         <img src="/assets/nav_logo.svg" alt="NAV-logo">
-    </a>
-</div>
+      </a>
+      <h1>
+        Besøk oss på <a href="https://github.com/navikt/">Github</a>, vi har <span id="repos">?</span> åpne repoer!
+      </h1>
+    </div>
+
+    <div>
+      <h2>Siste commits:</h2>
+    </div>
+    <div id="commits">
+      <!--table>
+        <tbody class="list">
+        </tbody>
+      </table-->
+        <ul class="list dashed">
+        </ul>
+    </div>
+    <script>
+      var formatDate = function (timestamp) {
+	      var date = new Date(timestamp);
+	      var months = ['Januar', 'Februar', 'Mars', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober',	'November', 'Desember'];
+	      return date.getDate() + " " + months[date.getMonth()] + " " + date.getHours() + ":" + date.getMinutes();
+      };
+
+      function updateCommitList(data) {
+        var elem = document.querySelector('#repos');
+        elem.innerHTML = data.publicRepositories.totalCount
+
+        var options = {
+          valueNames: ['date', 'repo', 'url', 'commit'],
+          item: function(values) {
+            return '<li class="li-commit">' + values.date + ' på <a href="' + values.url + '">' + values.repo + '</a><br />' + values.commit + '</li>';
+          }
+        }
+
+        var commits = [];
+        var nodes = data.publicRepositories.nodes;
+        for (let i = 0; i < nodes.length; i++) {
+          let node = nodes[i];
+          commits.push({
+            date: formatDate(node.updatedAt),
+            repo: node.name,
+            url: node.url,
+            commit: node.defaultBranchRef.target.message.replace('\n', '<br />')
+          })
+        }
+
+        var commitList = new List('commits', options, commits);
+      }
+
+      fetch('https://www.detsombetyrnoe.no/api/navikt/github')
+        .then(response => response.json())
+        .then(data => updateCommitList(data.organization));
+    </script>
+  </body>
+</html>
