@@ -1,0 +1,446 @@
+{
+  "organization": {
+    "__typename": "Organization",
+    "name": "NAV IT",
+    "websiteUrl": "https://nav.no",
+    "url": "https://github.com/navikt",
+    "description": "Arbeids- og velferdsdirektoratet - The Norwegian Labour and Welfare Directorate",
+    "publicRepositories": {
+      "__typename": "RepositoryConnection",
+      "totalCount": 1518,
+      "nodes": [
+        {
+          "__typename": "Repository",
+          "name": "mock-oauth2-server",
+          "updatedAt": "2022-03-30T11:46:42Z",
+          "pushedAt": "2022-03-30T09:16:30Z",
+          "url": "https://github.com/navikt/mock-oauth2-server",
+          "id": "MDEwOlJlcG9zaXRvcnkyMzU0MzI0MjE=",
+          "description": "A scriptable/customizable web server for testing HTTP clients using OAuth2/OpenID Connect or applications with a dependency to a running OAuth2 server (i.e. APIs requiring signed JWTs from a known issuer)",
+          "homepageUrl": "",
+          "primaryLanguage": {
+            "__typename": "Language",
+            "name": "Kotlin",
+            "color": "#A97BFF"
+          },
+          "defaultBranchRef": {
+            "__typename": "Ref",
+            "target": {
+              "__typename": "Commit",
+              "message": "Merge pull request #225 from navikt/dependabot/gradle/com.nimbusds-oauth2-oidc-sdk-9.32\n\nchore(deps): bump oauth2-oidc-sdk from 9.31.1 to 9.32",
+              "additions": 1,
+              "deletions": 1,
+              "commitUrl": "https://github.com/navikt/mock-oauth2-server/commit/a7000b6ad5f7d5d834237151f3bbd6c6c1aa6dec",
+              "history": {
+                "__typename": "CommitHistoryConnection",
+                "totalCount": 426
+              }
+            }
+          }
+        },
+        {
+          "__typename": "Repository",
+          "name": "sykdom-i-familien",
+          "updatedAt": "2022-03-30T11:24:18Z",
+          "pushedAt": "2022-03-16T09:55:16Z",
+          "url": "https://github.com/navikt/sykdom-i-familien",
+          "id": "MDEwOlJlcG9zaXRvcnkyMDUzMjkyOTI=",
+          "description": null,
+          "homepageUrl": null,
+          "primaryLanguage": {
+            "__typename": "Language",
+            "name": "TypeScript",
+            "color": "#2b7489"
+          },
+          "defaultBranchRef": {
+            "__typename": "Ref",
+            "target": {
+              "__typename": "Commit",
+              "message": "Merge pull request #582 from navikt/dev-slettBrowserstack\n\nSlett browserstack",
+              "additions": 0,
+              "deletions": 6,
+              "commitUrl": "https://github.com/navikt/sykdom-i-familien/commit/eeb11fbd5128ac0a8d63a5bc1bd93eca60abcf6b",
+              "history": {
+                "__typename": "CommitHistoryConnection",
+                "totalCount": 654
+              }
+            }
+          }
+        },
+        {
+          "__typename": "Repository",
+          "name": "sykdom-i-familien-sanity",
+          "updatedAt": "2022-03-30T11:23:53Z",
+          "pushedAt": "2022-03-25T18:10:07Z",
+          "url": "https://github.com/navikt/sykdom-i-familien-sanity",
+          "id": "MDEwOlJlcG9zaXRvcnkyMTgwODE3MDQ=",
+          "description": "Sanity Admin Studio for Sykdom i Familien",
+          "homepageUrl": null,
+          "primaryLanguage": {
+            "__typename": "Language",
+            "name": "JavaScript",
+            "color": "#f1e05a"
+          },
+          "defaultBranchRef": {
+            "__typename": "Ref",
+            "target": {
+              "__typename": "Commit",
+              "message": "Merge pull request #43 from navikt/dev-migrering_prod_gcp\n\nMigrering prod-gcp",
+              "additions": 1,
+              "deletions": 1,
+              "commitUrl": "https://github.com/navikt/sykdom-i-familien-sanity/commit/e6f0a8583fbe57397af6caf184de425008cfe2a0",
+              "history": {
+                "__typename": "CommitHistoryConnection",
+                "totalCount": 198
+              }
+            }
+          }
+        },
+        {
+          "__typename": "Repository",
+          "name": "fasit-frontend",
+          "updatedAt": "2022-03-30T11:14:40Z",
+          "pushedAt": "2022-03-30T12:00:40Z",
+          "url": "https://github.com/navikt/fasit-frontend",
+          "id": "MDEwOlJlcG9zaXRvcnk3NzE0NTYwOA==",
+          "description": "Frontend/web UI for the fasit application",
+          "homepageUrl": "",
+          "primaryLanguage": {
+            "__typename": "Language",
+            "name": "JavaScript",
+            "color": "#f1e05a"
+          },
+          "defaultBranchRef": {
+            "__typename": "Ref",
+            "target": {
+              "__typename": "Commit",
+              "message": "Updated workflow to allow dependabot to test pull requests",
+              "additions": 6,
+              "deletions": 9,
+              "commitUrl": "https://github.com/navikt/fasit-frontend/commit/8f85cf67fe178a64f2726727bdf976926e0ae1ab",
+              "history": {
+                "__typename": "CommitHistoryConnection",
+                "totalCount": 1419
+              }
+            }
+          }
+        },
+        {
+          "__typename": "Repository",
+          "name": "sykepengesoknad-backend",
+          "updatedAt": "2022-03-30T11:08:10Z",
+          "pushedAt": "2022-03-30T05:33:49Z",
+          "url": "https://github.com/navikt/sykepengesoknad-backend",
+          "id": "R_kgDOHFSZMQ",
+          "description": null,
+          "homepageUrl": null,
+          "primaryLanguage": {
+            "__typename": "Language",
+            "name": "Kotlin",
+            "color": "#A97BFF"
+          },
+          "defaultBranchRef": {
+            "__typename": "Ref",
+            "target": {
+              "__typename": "Commit",
+              "message": "Skrur av cronjobber og listeners",
+              "additions": 9,
+              "deletions": 7,
+              "commitUrl": "https://github.com/navikt/sykepengesoknad-backend/commit/9f00a8cb5c5d01378ad3e0c487ed3abb5508df5b",
+              "history": {
+                "__typename": "CommitHistoryConnection",
+                "totalCount": 8
+              }
+            }
+          }
+        },
+        {
+          "__typename": "Repository",
+          "name": "endringsmelding-pleiepenger",
+          "updatedAt": "2022-03-30T07:18:49Z",
+          "pushedAt": "2022-03-30T07:20:05Z",
+          "url": "https://github.com/navikt/endringsmelding-pleiepenger",
+          "id": "R_kgDOGNAgBg",
+          "description": "Applikasjon for endring av pleiepenger",
+          "homepageUrl": null,
+          "primaryLanguage": {
+            "__typename": "Language",
+            "name": "TypeScript",
+            "color": "#2b7489"
+          },
+          "defaultBranchRef": {
+            "__typename": "Ref",
+            "target": {
+              "__typename": "Commit",
+              "message": "Merge pull request #150 from navikt/dev-cypress\n\nCypress tester",
+              "additions": 5873,
+              "deletions": 1700,
+              "commitUrl": "https://github.com/navikt/endringsmelding-pleiepenger/commit/ede7c98c37c55909136260e603c859ac9c5ac4e1",
+              "history": {
+                "__typename": "CommitHistoryConnection",
+                "totalCount": 216
+              }
+            }
+          }
+        },
+        {
+          "__typename": "Repository",
+          "name": "tiltakspenger-oppslag",
+          "updatedAt": "2022-03-29T22:39:26Z",
+          "pushedAt": "2022-03-29T22:39:22Z",
+          "url": "https://github.com/navikt/tiltakspenger-oppslag",
+          "id": "R_kgDOHFBpVA",
+          "description": null,
+          "homepageUrl": null,
+          "primaryLanguage": {
+            "__typename": "Language",
+            "name": "Kotlin",
+            "color": "#A97BFF"
+          },
+          "defaultBranchRef": {
+            "__typename": "Ref",
+            "target": {
+              "__typename": "Commit",
+              "message": "initial commi",
+              "additions": 649,
+              "deletions": 0,
+              "commitUrl": "https://github.com/navikt/tiltakspenger-oppslag/commit/a835755d424c4dafad55cdf715819443295d7ab3",
+              "history": {
+                "__typename": "CommitHistoryConnection",
+                "totalCount": 1
+              }
+            }
+          }
+        },
+        {
+          "__typename": "Repository",
+          "name": "esyfovarsel",
+          "updatedAt": "2022-03-29T18:27:44Z",
+          "pushedAt": "2022-03-30T11:26:04Z",
+          "url": "https://github.com/navikt/esyfovarsel",
+          "id": "MDEwOlJlcG9zaXRvcnkzMDM5NzI1MzI=",
+          "description": "Ansvarlig for å håndtere varsler for eSYFO. Slack-kanal: #esyfo",
+          "homepageUrl": "",
+          "primaryLanguage": {
+            "__typename": "Language",
+            "name": "Kotlin",
+            "color": "#A97BFF"
+          },
+          "defaultBranchRef": {
+            "__typename": "Ref",
+            "target": {
+              "__typename": "Commit",
+              "message": "Access policy for reaching external hosts (#101)",
+              "additions": 7,
+              "deletions": 0,
+              "commitUrl": "https://github.com/navikt/esyfovarsel/commit/095156df2c33b49732d90a93d1a516b3fd46bb35",
+              "history": {
+                "__typename": "CommitHistoryConnection",
+                "totalCount": 102
+              }
+            }
+          }
+        },
+        {
+          "__typename": "Repository",
+          "name": "eresept-actions",
+          "updatedAt": "2022-03-29T13:48:05Z",
+          "pushedAt": "2022-03-29T13:48:01Z",
+          "url": "https://github.com/navikt/eresept-actions",
+          "id": "R_kgDOGofaPw",
+          "description": "felles actions for eresept",
+          "homepageUrl": null,
+          "primaryLanguage": {
+            "__typename": "Language",
+            "name": "Awk",
+            "color": "#c30e9b"
+          },
+          "defaultBranchRef": {
+            "__typename": "Ref",
+            "target": {
+              "__typename": "Commit",
+              "message": "snyk combined",
+              "additions": 93,
+              "deletions": 562,
+              "commitUrl": "https://github.com/navikt/eresept-actions/commit/274feebe992bb0ad3e58ee2e6be9dd7d95fd96eb",
+              "history": {
+                "__typename": "CommitHistoryConnection",
+                "totalCount": 154
+              }
+            }
+          }
+        },
+        {
+          "__typename": "Repository",
+          "name": "rekrutteringsbistand-kandidat-bigquery",
+          "updatedAt": "2022-03-29T13:19:42Z",
+          "pushedAt": "2022-03-30T12:00:08Z",
+          "url": "https://github.com/navikt/rekrutteringsbistand-kandidat-bigquery",
+          "id": "R_kgDOHFYRUA",
+          "description": "Pusher data fra databasen til rekrutteringsbistand-kandidat-api til Big Query",
+          "homepageUrl": null,
+          "primaryLanguage": {
+            "__typename": "Language",
+            "name": "Python",
+            "color": "#3572A5"
+          },
+          "defaultBranchRef": {
+            "__typename": "Ref",
+            "target": {
+              "__typename": "Commit",
+              "message": "Forsøk annen måte å skrive til BigQuery",
+              "additions": 5,
+              "deletions": 8,
+              "commitUrl": "https://github.com/navikt/rekrutteringsbistand-kandidat-bigquery/commit/23eddf503117b2a43526175faf0dde4a46b7c1c8",
+              "history": {
+                "__typename": "CommitHistoryConnection",
+                "totalCount": 38
+              }
+            }
+          }
+        },
+        {
+          "__typename": "Repository",
+          "name": "amt-tiltaksansvarlig-flate",
+          "updatedAt": "2022-03-29T13:13:30Z",
+          "pushedAt": "2022-03-30T10:13:54Z",
+          "url": "https://github.com/navikt/amt-tiltaksansvarlig-flate",
+          "id": "R_kgDOGLYMFQ",
+          "description": "Flate for tiltaksansvarlig",
+          "homepageUrl": "https://navikt.github.io/amt-tiltaksansvarlig-flate/",
+          "primaryLanguage": {
+            "__typename": "Language",
+            "name": "TypeScript",
+            "color": "#2b7489"
+          },
+          "defaultBranchRef": {
+            "__typename": "Ref",
+            "target": {
+              "__typename": "Commit",
+              "message": "Legger inn statisk deltaker for demo og bytter knappenavn",
+              "additions": 16,
+              "deletions": 6,
+              "commitUrl": "https://github.com/navikt/amt-tiltaksansvarlig-flate/commit/34da0d445156decf73b973214076975713a5d434",
+              "history": {
+                "__typename": "CommitHistoryConnection",
+                "totalCount": 25
+              }
+            }
+          }
+        },
+        {
+          "__typename": "Repository",
+          "name": "omsorgspenger-midlertidig-alene-api",
+          "updatedAt": "2022-03-29T11:08:41Z",
+          "pushedAt": "2022-03-29T11:08:24Z",
+          "url": "https://github.com/navikt/omsorgspenger-midlertidig-alene-api",
+          "id": "MDEwOlJlcG9zaXRvcnkyOTk4Mjk4MDI=",
+          "description": "API for søknad om å bli regnet som midlertidig alene",
+          "homepageUrl": "",
+          "primaryLanguage": {
+            "__typename": "Language",
+            "name": "Kotlin",
+            "color": "#A97BFF"
+          },
+          "defaultBranchRef": {
+            "__typename": "Ref",
+            "target": {
+              "__typename": "Commit",
+              "message": "Update README.md (#120)",
+              "additions": 2,
+              "deletions": 0,
+              "commitUrl": "https://github.com/navikt/omsorgspenger-midlertidig-alene-api/commit/ef4540659614ac764833291a33b9f06be35954af",
+              "history": {
+                "__typename": "CommitHistoryConnection",
+                "totalCount": 109
+              }
+            }
+          }
+        },
+        {
+          "__typename": "Repository",
+          "name": "dp-behov-journalforing",
+          "updatedAt": "2022-03-29T10:03:45Z",
+          "pushedAt": "2022-03-30T11:55:44Z",
+          "url": "https://github.com/navikt/dp-behov-journalforing",
+          "id": "R_kgDOHFUqAg",
+          "description": null,
+          "homepageUrl": null,
+          "primaryLanguage": {
+            "__typename": "Language",
+            "name": "Kotlin",
+            "color": "#A97BFF"
+          },
+          "defaultBranchRef": {
+            "__typename": "Ref",
+            "target": {
+              "__typename": "Commit",
+              "message": "Bruke filtype fra behov\n\nDAG-190\n\nCo-authored-by: André Roaldseth <andre.roaldseth@nav.no>",
+              "additions": 2,
+              "deletions": 2,
+              "commitUrl": "https://github.com/navikt/dp-behov-journalforing/commit/f19fb1bc2b6a032417e12c4d9c5b366de43562b2",
+              "history": {
+                "__typename": "CommitHistoryConnection",
+                "totalCount": 31
+              }
+            }
+          }
+        },
+        {
+          "__typename": "Repository",
+          "name": "yrkesskade-ekstern-gateway",
+          "updatedAt": "2022-03-29T08:24:27Z",
+          "pushedAt": "2022-03-29T08:32:22Z",
+          "url": "https://github.com/navikt/yrkesskade-ekstern-gateway",
+          "id": "R_kgDOHFU9iw",
+          "description": null,
+          "homepageUrl": null,
+          "primaryLanguage": null,
+          "defaultBranchRef": {
+            "__typename": "Ref",
+            "target": {
+              "__typename": "Commit",
+              "message": "gitignore, codeowners, license, readme",
+              "additions": 70,
+              "deletions": 0,
+              "commitUrl": "https://github.com/navikt/yrkesskade-ekstern-gateway/commit/a0937f3fd37eb3a243ddc5c52afd8bcce07bdd3d",
+              "history": {
+                "__typename": "CommitHistoryConnection",
+                "totalCount": 2
+              }
+            }
+          }
+        },
+        {
+          "__typename": "Repository",
+          "name": "dp-behov-soknad-pdf",
+          "updatedAt": "2022-03-29T08:04:58Z",
+          "pushedAt": "2022-03-30T07:56:36Z",
+          "url": "https://github.com/navikt/dp-behov-soknad-pdf",
+          "id": "R_kgDOHE4Z7A",
+          "description": null,
+          "homepageUrl": null,
+          "primaryLanguage": {
+            "__typename": "Language",
+            "name": "Kotlin",
+            "color": "#A97BFF"
+          },
+          "defaultBranchRef": {
+            "__typename": "Ref",
+            "target": {
+              "__typename": "Commit",
+              "message": "PdfLagring\n\nDAG-189\n\nCo-authored-by: Giao The Cung <giaothe@gmail.com>",
+              "additions": 33,
+              "deletions": 5,
+              "commitUrl": "https://github.com/navikt/dp-behov-soknad-pdf/commit/91dca2c53e722fa55b39e99287bd2220dff11b31",
+              "history": {
+                "__typename": "CommitHistoryConnection",
+                "totalCount": 21
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
