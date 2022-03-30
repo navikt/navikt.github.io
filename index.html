@@ -1,94 +1,135 @@
 <!DOCTYPE html>
 <html lang="no">
-  <head>
+<head>
     <meta charset="utf-8">
     <title>NAVIKT</title>
     <link href="https://www.nav.no/dekoratoren/media/favicon.ico" rel="icon" type="image/x-icon">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js" integrity="sha384-FhEOA/pIE4BfDuwGksHaZD8ms5j+dfB9QIWo7naDMzAVoCE1My4G2iu8/n/R3AAH" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"
+            integrity="sha384-FhEOA/pIE4BfDuwGksHaZD8ms5j+dfB9QIWo7naDMzAVoCE1My4G2iu8/n/R3AAH"
+            crossorigin="anonymous"></script>
     <style>
-      ul.dashed {
-          padding: 0;
-          list-style-type: none;
-      }
+        html {
+            font-size: 112.5%;
+            font-weight: 300;
+            background-color: #32414f;
+            color: #333;
+        }
 
-      ul.dashed > li {
-          margin-block-start: 1em;
-          margin-block-end: 1em;
-          margin-inline-start: 1em;
-          margin-inline-end: 1em;
-      }
+        img {
+            max-width: 25%;
+            max-height: 25%;
+        }
 
-      ul.dashed > li:before {
-          content: "–"; /* en dash */
-          position: absolute;
-          margin-left: -1.1em;
-      }
+        h1 {
+            color: white;
+            filter: brightness(85%);
+        }
+
+        h2 {
+            color: white;
+            filter: brightness(85%);
+        }
+
+        li {
+            color: white;
+            filter: brightness(85%);
+        }
+
+        a {
+            color: white;
+            filter: brightness(85%);
+        }
+
+        a:hover {
+            filter: brightness(100%);
+        }
+
+        ul.dashed {
+            padding: 0;
+            list-style-type: circle;
+        }
+
+        ul.dashed > li {
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 1em;
+            margin-inline-end: 1em;
+        }
+
+        ul.dashed > li:before {
+            position: absolute;
+            margin-left: -1.1em;
+        }
     </style>
-  </head>
-  <body>
-    <div>
-      <a href="https://www.nav.no/" title="Hjem" data-ga="Header/Logo">
-        <img src="/assets/nav_logo.svg" alt="NAV-logo">
-      </a>
-      <h1>
+</head>
+<body>
+<div>
+    <a href="https://www.nav.no/" title="Hjem" data-ga="Header/Logo">
+        <img src="/assets/nav-logo-hvit.png" alt="NAV-logo">
+    </a>
+    <h1>
         Besøk oss på <a href="https://github.com/navikt/">Github</a>, vi har <span id="repos">?</span> åpne repoer!
-      </h1>
-    </div>
+    </h1>
+</div>
 
-    <div>
-      <h2>Siste commits:</h2>
-    </div>
-    <div id="commits">
-        <ul class="list dashed">
-        </ul>
-    </div>
-    <script>
-      const dateFormatter = new Intl.DateTimeFormat("no", {
+<div>
+    <h2>Siste commits:</h2>
+</div>
+<div id="commits">
+    <ul class="list dashed">
+    </ul>
+</div>
+<script>
+    const dateFormatter = new Intl.DateTimeFormat("no", {
         month: "long",
         day: "2-digit",
         hour: "2-digit",
         minute: "2-digit",
-      })
+    })
 
-      function parseNode(node) {
+    function parseNode(node) {
         var item = {
-          date: dateFormatter.format(new Date(node.updatedAt)),
-          repo: node.name,
-          url: node.url,
+            date: dateFormatter.format(new Date(node.updatedAt)),
+            repo: node.name,
+            url: node.url,
         }
 
         if (node.defaultBranchRef == null) {
-          item.message = node.description;
+            item.message = node.description;
         } else {
-          item.message = node.defaultBranchRef.target.message.replace('\n', '<br />');
+            item.message = node.defaultBranchRef.target.message.replace('\n', '<br />');
         }
 
         return item
-      }
+    }
 
-      function updateCommitList(data) {
+    function updateCommitList(data) {
         var elem = document.querySelector('#repos');
         elem.innerHTML = data.publicRepositories.totalCount
 
         var options = {
-          item: function(values) {
-            return '<li class="li-commit">' + values.date + ' på <a href="' + values.url + '">' + values.repo + '</a><br />' + values.message + '</li>';
-          }
+            item: function (values) {
+                return '<li class="li-commit">'
+                    + values.date + ' på <a href="'
+                    + values.url + '">'
+                    + values.repo + '</a><br />'
+                    + values.message + '</li>';
+            }
         }
 
         var commits = [];
         var nodes = data.publicRepositories.nodes;
         for (let i = 0; i < nodes.length; i++) {
-          let node = nodes[i];
-          commits.push(parseNode(node))
+            let node = nodes[i];
+            commits.push(parseNode(node))
         }
 
         var commitList = new List('commits', options, commits);
-      }
+    }
 
-      fetch('https://www.detsombetyrnoe.no/api/navikt/github')
+    fetch('https://www.detsombetyrnoe.no/api/navikt/github')
         .then(response => response.json())
         .then(data => updateCommitList(data.organization));
-    </script>
-  </body>
+</script>
+</body>
 </html>
