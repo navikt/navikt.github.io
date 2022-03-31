@@ -6,18 +6,33 @@
     <link href="https://www.nav.no/dekoratoren/media/favicon.ico" rel="icon" type="image/x-icon">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"
             integrity="sha384-FhEOA/pIE4BfDuwGksHaZD8ms5j+dfB9QIWo7naDMzAVoCE1My4G2iu8/n/R3AAH"
-            crossorigin="anonymous"></script>
+            crossorigin="anonymous">
+    </script>
     <style>
-        html {
+
+        body {
             font-size: 112.5%;
             font-weight: 300;
             background-color: #32414f;
             color: #333;
+            text-align: center;
+            width: 100vw;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            position: relative;
+            max-width: 100vw;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body * {
+            box-sizing: border-box !important;
         }
 
         img {
-            max-width: 25%;
-            max-height: 25%;
+            max-width: 50%;
+            max-height: 50%;
         }
 
         h1 {
@@ -44,26 +59,29 @@
             filter: brightness(100%);
         }
 
-        ul.dashed {
+        ul.center {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .list {
+            list-style: none;
             padding: 0;
-            list-style-type: circle;
+            margin: 0;
         }
 
-        ul.dashed > li {
-            margin-block-start: 1em;
-            margin-block-end: 1em;
-            margin-inline-start: 1em;
-            margin-inline-end: 1em;
+        .center {
+            text-align: center;
+            padding: 0;
+            margin: 0;
         }
 
-        ul.dashed > li:before {
-            position: absolute;
-            margin-left: -1.1em;
-        }
     </style>
 </head>
 <body>
-<div>
+<div class="center">
     <a href="https://www.nav.no/" title="Hjem" data-ga="Header/Logo">
         <img src="/assets/nav-logo-hvit.png" alt="NAV-logo">
     </a>
@@ -72,11 +90,11 @@
     </h1>
 </div>
 
-<div>
+<div class="center">
     <h2>Siste commits:</h2>
 </div>
-<div id="commits">
-    <ul class="list dashed">
+<div id="commits" class="center">
+    <ul class="list center">
     </ul>
 </div>
 <script>
@@ -109,7 +127,7 @@
 
         var options = {
             item: function (values) {
-                return '<li class="li-commit">'
+                return '<li>'
                     + values.date + ' på <a href="'
                     + values.url + '">'
                     + values.repo + '</a><br />'
