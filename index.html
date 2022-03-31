@@ -151,7 +151,7 @@
         var commitList = new List('commits', options, commits);
     }
 
-    fetch('./testdata/github.json')
+    fetch('https://www.detsombetyrnoe.no/api/navikt/github')
         .then(response => response.json())
         .then(data => updateCommitList(data.organization));
 </script>
