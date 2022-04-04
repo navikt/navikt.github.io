@@ -1,3 +1,5 @@
+[![pages-build-deployment](https://github.com/navikt/navikt.github.io/actions/workflows/pages/pages-build-deployment/badge.svg?branch=master)](https://github.com/navikt/navikt.github.io/actions/workflows/pages/pages-build-deployment)
+
 # navikt.github.io
 
 En veldig enkel side for presentere _litt_ informasjon om oss på Github.
