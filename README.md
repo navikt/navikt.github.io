@@ -12,3 +12,9 @@ En veldig enkel side for presentere _litt_ informasjon om oss på Github.
 3. Gjør endringer
 4. Åpne `index.html` i en nettleser
 5. Suksess?
+
+## Henvendelser
+Spørsmål knyttet til koden eller prosjektet kan stilles som issues her på GitHub.
+
+### For NAV-ansatte
+Interne henvendelser kan sendes via Slack i kanalen ![#open-source](https://nav-it.slack.com/archives/C6NGMTSTA)
