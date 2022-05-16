@@ -85,7 +85,9 @@
         new List('commits', options, commits);
     }
 
-    fetch('https://www.detsombetyrnoe.no/api/navikt/github')
+    const detsombetyrnoeApiUrl = 'https://www.detsombetyrnoe.no/api/navikt/github'
+
+    fetch(detsombetyrnoeApiUrl)
         .then(response => response.json())
         .then(data => updateCommitList(data.organization));
 </script>
