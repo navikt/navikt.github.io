@@ -8,7 +8,7 @@ En veldig enkel side for presentere _litt_ informasjon om oss på Github.
 
 1. Ta et uttrek fra https://www.detsombetyrnoe.no/api/navikt/github og lagre som fil
 2. Last JSON fra filen din via `fetch` i stedet for API-et som er der, eks
-   `fetch('./github.json')` eller du kan benytte denne `fetch('./testdata/github.json')`
+   `detsombetyrnoeApiUrl = './github.json'` eller du kan benytte denne `detsombetyrnoeApiUrl =  './testdata/github.json'`
 3. Gjør endringer
 4. Åpne `index.html` i en nettleser
 5. Suksess?
@@ -17,4 +17,4 @@ En veldig enkel side for presentere _litt_ informasjon om oss på Github.
 Spørsmål knyttet til koden eller prosjektet kan stilles som issues her på GitHub.
 
 ### For NAV-ansatte
-Interne henvendelser kan sendes via Slack i kanalen ![#open-source](https://nav-it.slack.com/archives/C6NGMTSTA)
+Interne henvendelser kan sendes via Slack i kanalen #open-source
