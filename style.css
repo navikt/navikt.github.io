@@ -1,114 +1,122 @@
 @font-face {
-    font-family: "Source Sans Pro";
-    font-style: normal;
-    font-weight: 300;
-    src: local(""),
-        url("/assets/source-sans-pro-v21-latin-300.woff2") format("woff2"),
-        url("/assets/source-sans-pro-v21-latin-300.woff") format("woff");
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 300;
+  src: local(""),
+    url("/assets/source-sans-pro-v21-latin-300.woff2") format("woff2"),
+    url("/assets/source-sans-pro-v21-latin-300.woff") format("woff");
 }
 
 @font-face {
-    font-family: "Source Sans Pro";
-    font-style: normal;
-    font-weight: 400;
-    src: local(""),
-        url("/assets/source-sans-pro-v21-latin-regular.woff2") format("woff2"),
-        url("/assets/source-sans-pro-v21-latin-regular.woff") format("woff");
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+    url("/assets/source-sans-pro-v21-latin-regular.woff2") format("woff2"),
+    url("/assets/source-sans-pro-v21-latin-regular.woff") format("woff");
 }
 
 @font-face {
-    font-family: "Source Sans Pro";
-    font-style: normal;
-    font-weight: 700;
-    src: local(""),
-        url("/assets/source-sans-pro-v21-latin-700.woff2") format("woff2"),
-        url("/assets/source-sans-pro-v21-latin-700.woff") format("woff");
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""),
+    url("/assets/source-sans-pro-v21-latin-700.woff2") format("woff2"),
+    url("/assets/source-sans-pro-v21-latin-700.woff") format("woff");
 }
 
 @font-face {
-    font-family: "Source Code Pro";
-    font-style: normal;
-    font-weight: 400;
-    src: local(""),
-        url("/assets/source-code-pro-v21-latin-regular.woff2") format("woff2"),
-        url("/assets/source-code-pro-v21-latin-regular.woff") format("woff");
+  font-family: "Source Code Pro";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+    url("/assets/source-code-pro-v21-latin-regular.woff2") format("woff2"),
+    url("/assets/source-code-pro-v21-latin-regular.woff") format("woff");
 }
 
 body {
-    font-size: 112.5%;
-    background-color: #32414f;
-    color: white;
-    font-family: "Source Sans Pro", sans-serif;
+  font-size: 112.5%;
+  background-color: #32414f;
+  color: white;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 a {
-    color: white;
-    filter: brightness(95%);
+  color: white;
+  filter: brightness(95%);
 }
 
 a:hover {
-    filter: none;
+  filter: none;
 }
 
 header,
 main {
-    margin: 0 auto;
-    padding: 0 2rem;
-    max-width: 900px;
-    padding-bottom: 1rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  max-width: 900px;
+  padding-bottom: 1rem;
 }
 
 header {
-    text-align: center;
-    padding-top: 1rem;
+  text-align: center;
+  padding-top: 1rem;
 }
 
 header svg {
-    width: 50%;
-    max-width: 500px;
+  width: 50%;
+  max-width: 500px;
 }
 
 header a {
-    filter: none;
+  filter: none;
 }
 
 * {
-    box-sizing: border-box !important;
+  box-sizing: border-box !important;
 }
 
 li {
-    list-style-type: "\1F680";
-    padding-left: 0.5em;
-    padding-bottom: 1.5em;
+  list-style-type: "\1F680";
+  padding-left: 0.5em;
+  padding-bottom: 1.5em;
 }
 
-
-li>pre {
-    filter: brightness(75%);
-    font-family: 'Source Code Pro', monospace;
-    font-size: .8em;
-    line-height: 1;
-    white-space: pre-wrap;
+li > pre {
+  filter: brightness(75%);
+  font-family: "Source Code Pro", monospace;
+  font-size: 0.8em;
+  line-height: 1;
+  white-space: pre-wrap;
 }
 
 main h2 {
-    text-align: center;
-    padding-bottom: 1rem;
+  text-align: center;
+  padding-bottom: 1rem;
 }
 
 .githublink {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: fit-content;
-    margin: 2rem 2rem 2rem auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: fit-content;
+  margin: 2rem 2rem 2rem auto;
 }
 
 .githublink svg {
-    margin: 0.5rem;
-    height: 4rem;
+  margin: 0.5rem;
+  height: 4rem;
 }
 
 .githublink div {
-    margin-right: 1rem;
+  margin-right: 1rem;
+}
+
+@media only screen and (max-width: 700px) {
+  main {
+    padding: 0;
+  }
+  ul {
+    padding-inline-start: 25px;
+  }
 }
