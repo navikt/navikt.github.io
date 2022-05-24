@@ -1,85 +1,118 @@
-body {
-    font-size: 112.5%;
-    background-color: #32414f;
-    color: #333;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    position: relative;
-    display: flex;
-    flex-direction: column;
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 300;
+  src: local(""),
+    url("/assets/source-sans-pro-v21-latin-300.woff2") format("woff2"),
+    url("/assets/source-sans-pro-v21-latin-300.woff") format("woff");
 }
 
-body * {
-    box-sizing: border-box !important;
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+    url("/assets/source-sans-pro-v21-latin-regular.woff2") format("woff2"),
+    url("/assets/source-sans-pro-v21-latin-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""),
+    url("/assets/source-sans-pro-v21-latin-700.woff2") format("woff2"),
+    url("/assets/source-sans-pro-v21-latin-700.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Source Code Pro";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+    url("/assets/source-code-pro-v21-latin-regular.woff2") format("woff2"),
+    url("/assets/source-code-pro-v21-latin-regular.woff") format("woff");
+}
+
+body {
+  font-size: 112.5%;
+  background-color: #32414f;
+  color: white;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+* {
+  box-sizing: border-box !important;
 }
 
 img {
-    max-width: 50%;
-    max-height: 50%;
-}
-
-h1 {
-    color: white;
-    filter: brightness(85%);
-}
-
-h2 {
-    color: white;
-    filter: brightness(85%);
+  max-width: 50%;
+  max-height: 50%;
 }
 
 li {
-    color: white;
-    filter: brightness(85%);
+  color: white;
+  padding-left: 0.5em;
 }
 
 a {
-    color: white;
-    filter: brightness(85%);
+  color: white;
+  filter: brightness(95%);
 }
 
 a:hover {
-    filter: brightness(100%);
+  filter: none;
 }
 
 ul.center {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .list {
-    list-style-type: "\1F680";
-    margin: 0;
+  list-style-type: "\1F680";
+  margin: 0;
 }
 
 .center {
-    text-align: center;
-    padding: 0;
-    margin-bottom: 2rem;
+  text-align: center;
+  padding: 0;
+  margin-bottom: 2rem;
 }
 
 .commits {
-    text-align: left;
-    width: 700px;
-    margin: 0 auto;
+  text-align: left;
+  width: 700px;
+  margin: 0 auto;
+}
+
+.commits pre {
+  filter: brightness(75%);
+  font-family: 'Source Code Pro', monospace;
+  line-height: .6;
+  font-size: .8em;
 }
 
 .github {
-    position: absolute;
-    right: 2rem;
-    bottom: 1rem;
+  position: absolute;
+  right: 2rem;
+  bottom: 1rem;
 }
 
 .githublink {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .icon {
-    margin-left: 0.5rem;
-    height: 4rem;
+  margin-left: 0.5rem;
+  height: 4rem;
 }
