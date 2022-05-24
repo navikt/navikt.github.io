@@ -2,7 +2,7 @@
 <html lang="no">
 <meta charset="UTF-8">
 <head>
-    <title>NAVIKT</title>
+    <title>NAV IT</title>
     <link href="https://www.nav.no/dekoratoren/media/favicon.ico" rel="icon" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"
@@ -55,7 +55,7 @@
         if (node.defaultBranchRef == null) {
             item.message = node.description;
         } else {
-            item.message = node.defaultBranchRef.target.message.replace('\n', '<br />');
+            item.message = node.defaultBranchRef.target.message;
         }
 
         return item
@@ -67,11 +67,11 @@
 
         var options = {
             item: function (values) {
-                return '<li class="commits">'
+                return '<li class="commits"><div class="headline">'
                     + values.date + ' på <a href="'
                     + values.url + '">'
-                    + values.repo + '</a><br />'
-                    + values.message + '</li>';
+                    + values.repo + '</a></div><pre>'
+                    + values.message + '</pre></li>';
             }
         };
 
