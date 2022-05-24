@@ -1,95 +1,144 @@
 <!DOCTYPE html>
 <html lang="no">
-<meta charset="UTF-8">
-<head>
+  <head>
+    <meta charset="UTF-8" />
     <title>NAV IT</title>
-    <link href="https://www.nav.no/dekoratoren/media/favicon.ico" rel="icon" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"
-            integrity="sha384-FhEOA/pIE4BfDuwGksHaZD8ms5j+dfB9QIWo7naDMzAVoCE1My4G2iu8/n/R3AAH"
-            crossorigin="anonymous">
-    </script>
-</head>
-<body>
-<div class="center">
-    <a href="https://www.nav.no/" title="Hjem" data-ga="Header/Logo">
-        <img src="/assets/nav-logo-hvit.png" alt="NAV-logo">
-    </a>
-    <h1>
-        Besøk oss på <a href="https://github.com/navikt/">Github</a>, vi har <span id="repos">?</span> åpne repoer!
-    </h1>
-</div>
+    <link
+      href="https://www.nav.no/dekoratoren/media/favicon.ico"
+      rel="icon"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"
+      integrity="sha384-FhEOA/pIE4BfDuwGksHaZD8ms5j+dfB9QIWo7naDMzAVoCE1My4G2iu8/n/R3AAH"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<div class="center">
-    <h2>Siste commits:</h2>
-</div>
-<div id="commits" class="center">
-    <ul class="list center">
-    </ul>
-</div>
-
-<div class="github">
-    <a href="https://github.com/navikt/navikt.github.io" class="githublink">
-        Kode
-        <svg viewBox="0 0 16 16" class="icon">
-            <path fill="currentColor" fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+  <body>
+    <header>
+      <a href="https://www.nav.no/" title="Hjem" data-ga="Header/Logo">
+        <svg
+          version="1.1"
+          viewBox="0 0 82.6 51.7"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polygon fill="white" points="0 37.2 5.3 24.1 10.4 24.1 5.1 37.2" />
+          <polygon
+            fill="white"
+            points="65.2 37.2 70.5 24.1 73.2 24.1 68 37.2"
+          />
+          <g transform="translate(246 77.942)">
+            <mask
+              x="-170.5"
+              y="-53.9"
+              width="6.7"
+              height="13.1"
+              maskUnits="userSpaceOnUse"
+            >
+              <polygon
+                points="-163.8 -40.8 -163.8 -53.9 -170.5 -53.9 -170.5 -40.8"
+              />
+            </mask>
+            <polygon
+              points="-170.5 -40.8 -165.3 -53.9 -163.8 -53.9 -169 -40.8"
+              fill="white"
             />
+          </g>
+          <path
+            d="m38.4 51.7c-14.3 0-25.9-11.6-25.9-25.9 0-14.2 11.6-25.8 25.9-25.8s25.9 11.6 25.9 25.9-11.6 25.8-25.9 25.8zm22-27.6h-4.6s-0.3 0-0.4 0.3l-2.5 7.8-2.5-7.8c-0.1-0.3-0.4-0.3-0.4-0.3h-8.8c-0.2 0-0.4 0.2-0.4 0.4v2.6c0-2.1-2.2-3-3.5-3-2.9 0-4.9 1.9-5.5 4.9 0-1.9-0.2-2.6-0.7-3.4-0.2-0.3-0.6-0.6-1-0.9-0.8-0.5-1.5-0.6-3-0.6h-1.8s-0.3 0-0.4 0.3l-1.6 4v-3.9c0-0.2-0.2-0.4-0.4-0.4h-4.1s-0.3 0-0.4 0.3l-1.7 4.1s-0.2 0.4 0.2 0.4h1.6v7.9c0 0.2 0.2 0.4 0.4 0.4h4.1c0.2 0 0.4-0.2 0.4-0.4v-7.9h1.6c0.9 0 1.1 0 1.5 0.2 0.2 0.1 0.4 0.2 0.5 0.4 0.2 0.4 0.3 0.9 0.3 2.3v5c0 0.2 0.2 0.4 0.4 0.4h3.9s0.4 0 0.6-0.4l0.9-2.1c1.1 1.6 3 2.6 5.4 2.6h0.5s0.4 0 0.6-0.4l1.5-3.7v3.8c0 0.2 0.2 0.4 0.4 0.4h4s0.4 0 0.6-0.4c0 0 1.6-3.9 1.6-4 0.1-0.3-0.4-0.3-0.4-0.3h-1.4v-6.8l4.5 11.1c0.2 0.4 0.6 0.4 0.6 0.4h4.7s0.4 0 0.6-0.4l4.9-12.2c-0.3-0.7-0.8-0.7-0.8-0.7zm-19.7 8.3h-2.7c-1.1 0-1.9-0.9-1.9-1.9 0-1.1 0.9-1.9 1.9-1.9h0.7c1.1 0 1.9 0.9 1.9 1.9v1.9z"
+            fill="white"
+          />
         </svg>
-    </a>
-</div>
-<script>
-    const dateFormatter = new Intl.DateTimeFormat("no", {
+      </a>
+      <h1>
+        Besøk oss på <a href="https://github.com/navikt/">GitHub</a> &ndash; vi
+        har <span id="repos">?</span> åpne repoer!
+      </h1>
+    </header>
+
+    <main>
+      <h2>Siste commits:</h2>
+      <ul class="list"></ul>
+    </main>
+
+    <footer>
+      <a href="https://github.com/navikt/navikt.github.io" class="githublink">
+        <div>Kode</div>
+        <svg viewBox="0 0 16 16">
+          <path
+            fill="currentColor"
+            fill-rule="evenodd"
+            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+          />
+        </svg>
+      </a>
+    </footer>
+    <script>
+      const dateFormatter = new Intl.DateTimeFormat("no", {
         month: "long",
         day: "2-digit",
         hour: "2-digit",
         minute: "2-digit",
-    })
+      });
 
-    function parseNode(node) {
-        const item = {
-            date: dateFormatter.format(new Date(node.updatedAt)),
-            repo: node.name,
-            url: node.url,
+      function parseNode({
+        name,
+        url,
+        updatedAt,
+        defaultBranchRef,
+        description,
+      }) {
+        const message = (
+          defaultBranchRef ? defaultBranchRef.target.message : description
+        ).replace(
+          /[&<>'"]/g,
+          (tag) =>
+            ({
+              "&": "&amp;",
+              "<": "&lt;",
+              ">": "&gt;",
+              "'": "&#39;",
+              '"': "&quot;",
+            }[tag] || tag)
+        );
+
+        return {
+          date: dateFormatter.format(new Date(updatedAt)),
+          name,
+          url,
+          message,
+        };
+      }
+
+      const updateCommitCount = (totalCount) => {
+        document.querySelector("#repos").innerHTML = totalCount;
+      };
+
+      const updateCommitList = (commits) => {
+        const options = {
+          item: ({ date, url, name, message }) =>
+            `<li>${date} på <a href="${url}">${name}</a><pre>${message}</pre></li>`,
         };
 
-        if (node.defaultBranchRef == null) {
-            item.message = node.description;
-        } else {
-            item.message = node.defaultBranchRef.target.message;
-        }
+        new List(
+          document.querySelector("main"),
+          options,
+          commits.map(parseNode)
+        );
+      };
 
-        return item
-    }
+      const updateData = ({ publicRepositories }) => {
+        updateCommitCount(publicRepositories.totalCount);
+        updateCommitList(publicRepositories.nodes);
+      };
 
-    function updateCommitList(data) {
-        const elem = document.querySelector('#repos');
-        elem.innerHTML = data.publicRepositories.totalCount
+      const detsombetyrnoeApiUrl = 'https://www.detsombetyrnoe.no/api/navikt/github'
 
-        var options = {
-            item: function (values) {
-                return '<li class="commits"><div class="headline">'
-                    + values.date + ' på <a href="'
-                    + values.url + '">'
-                    + values.repo + '</a></div><pre>'
-                    + values.message + '</pre></li>';
-            }
-        };
-
-        const commits = [];
-        const nodes = data.publicRepositories.nodes;
-        for (let i = 0; i < nodes.length; i++) {
-            let node = nodes[i];
-            commits.push(parseNode(node))
-        }
-
-        new List('commits', options, commits);
-    }
-
-    const detsombetyrnoeApiUrl = 'https://www.detsombetyrnoe.no/api/navikt/github'
-
-    fetch(detsombetyrnoeApiUrl)
-        .then(response => response.json())
-        .then(data => updateCommitList(data.organization));
-</script>
-</body>
+      fetch(detsombetyrnoeApiUrl)
+        .then((response) => response.json())
+        .then((data) => updateData(data.organization));
+    </script>
+  </body>
 </html>

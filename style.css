@@ -1,118 +1,114 @@
 @font-face {
-  font-family: "Source Sans Pro";
-  font-style: normal;
-  font-weight: 300;
-  src: local(""),
-    url("/assets/source-sans-pro-v21-latin-300.woff2") format("woff2"),
-    url("/assets/source-sans-pro-v21-latin-300.woff") format("woff");
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: 300;
+    src: local(""),
+        url("/assets/source-sans-pro-v21-latin-300.woff2") format("woff2"),
+        url("/assets/source-sans-pro-v21-latin-300.woff") format("woff");
 }
 
 @font-face {
-  font-family: "Source Sans Pro";
-  font-style: normal;
-  font-weight: 400;
-  src: local(""),
-    url("/assets/source-sans-pro-v21-latin-regular.woff2") format("woff2"),
-    url("/assets/source-sans-pro-v21-latin-regular.woff") format("woff");
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: 400;
+    src: local(""),
+        url("/assets/source-sans-pro-v21-latin-regular.woff2") format("woff2"),
+        url("/assets/source-sans-pro-v21-latin-regular.woff") format("woff");
 }
 
 @font-face {
-  font-family: "Source Sans Pro";
-  font-style: normal;
-  font-weight: 700;
-  src: local(""),
-    url("/assets/source-sans-pro-v21-latin-700.woff2") format("woff2"),
-    url("/assets/source-sans-pro-v21-latin-700.woff") format("woff");
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: 700;
+    src: local(""),
+        url("/assets/source-sans-pro-v21-latin-700.woff2") format("woff2"),
+        url("/assets/source-sans-pro-v21-latin-700.woff") format("woff");
 }
 
 @font-face {
-  font-family: "Source Code Pro";
-  font-style: normal;
-  font-weight: 400;
-  src: local(""),
-    url("/assets/source-code-pro-v21-latin-regular.woff2") format("woff2"),
-    url("/assets/source-code-pro-v21-latin-regular.woff") format("woff");
+    font-family: "Source Code Pro";
+    font-style: normal;
+    font-weight: 400;
+    src: local(""),
+        url("/assets/source-code-pro-v21-latin-regular.woff2") format("woff2"),
+        url("/assets/source-code-pro-v21-latin-regular.woff") format("woff");
 }
 
 body {
-  font-size: 112.5%;
-  background-color: #32414f;
-  color: white;
-  padding: 0;
-  margin: 0;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  font-family: "Source Sans Pro", sans-serif;
-}
-
-* {
-  box-sizing: border-box !important;
-}
-
-img {
-  max-width: 50%;
-  max-height: 50%;
-}
-
-li {
-  color: white;
-  padding-left: 0.5em;
+    font-size: 112.5%;
+    background-color: #32414f;
+    color: white;
+    font-family: "Source Sans Pro", sans-serif;
 }
 
 a {
-  color: white;
-  filter: brightness(95%);
+    color: white;
+    filter: brightness(95%);
 }
 
 a:hover {
-  filter: none;
+    filter: none;
 }
 
-ul.center {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  gap: 1.5rem;
+header,
+main {
+    margin: 0 auto;
+    padding: 0 2rem;
+    max-width: 900px;
+    padding-bottom: 1rem;
 }
 
-.list {
-  list-style-type: "\1F680";
-  margin: 0;
+header {
+    text-align: center;
+    padding-top: 1rem;
 }
 
-.center {
-  text-align: center;
-  padding: 0;
-  margin-bottom: 2rem;
+header svg {
+    width: 50%;
+    max-width: 500px;
 }
 
-.commits {
-  text-align: left;
-  width: 700px;
-  margin: 0 auto;
+header a {
+    filter: none;
 }
 
-.commits pre {
-  filter: brightness(75%);
-  font-family: 'Source Code Pro', monospace;
-  line-height: .6;
-  font-size: .8em;
+* {
+    box-sizing: border-box !important;
 }
 
-.github {
-  position: absolute;
-  right: 2rem;
-  bottom: 1rem;
+li {
+    list-style-type: "\1F680";
+    padding-left: 0.5em;
+    padding-bottom: 1.5em;
+}
+
+
+li>pre {
+    filter: brightness(75%);
+    font-family: 'Source Code Pro', monospace;
+    font-size: .8em;
+    line-height: 1;
+    white-space: pre-wrap;
+}
+
+main h2 {
+    text-align: center;
+    padding-bottom: 1rem;
 }
 
 .githublink {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: fit-content;
+    margin: 2rem 2rem 2rem auto;
 }
 
-.icon {
-  margin-left: 0.5rem;
-  height: 4rem;
+.githublink svg {
+    margin: 0.5rem;
+    height: 4rem;
+}
+
+.githublink div {
+    margin-right: 1rem;
 }
